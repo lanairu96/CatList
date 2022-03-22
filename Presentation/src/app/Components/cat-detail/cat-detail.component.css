@@ -1,0 +1,46 @@
+#mainContainer{
+    margin: 20px;
+    background-color: white; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 30px;
+    border-radius: 4px;
+    -webkit-box-shadow: 2px 2px 5px 0px gray;
+    -moz-box-shadow: 2px 2px 5px 0px gray;
+    box-shadow: 2px 2px 5px 0px gray;
+    object-fit: cover;
+}
+
+.detailImg{
+    max-width: 600px;
+    border-radius: 5%;
+    align-self: center;
+}
+
+.statLabel{
+    font-weight: bold;
+}
+
+#mainImage{
+    border-radius: 1px;
+    border: solid 2px lightgray;
+    -webkit-box-shadow: 2px 2px 5px 0px lightgray;
+    -moz-box-shadow: 2px 2px 5px 0px lightgray;
+    box-shadow: 2px 2px 5px 0px lightgray;
+}
+
+textarea{
+    resize:none;
+}
+
+.btnForm{
+    margin-top: 10px;
+}
+
+.date-label{
+    font-size: smaller;
+    margin-top: -4px;
+    color: gray;
+}
+
+.message-label{
+    margin-top: 5px;
+}

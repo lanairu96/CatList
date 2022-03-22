@@ -1,0 +1,38 @@
+<div class="container">
+    <div class ="row">
+        <div class="col col-lg-10 offset-lg-1" id="tableContainer" >
+            <table id="catsTable" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Name</th>
+                        <th class="d-none d-md-table-cell" scope="col">Charm</th>
+                        <th class="d-none d-md-table-cell" scope="col">Coolness</th>
+                        <th class="d-none d-md-table-cell" scope="col">Fluidness</th>
+                        <th class="d-none d-md-table-cell" scope="col">Softness</th>
+                        <th class="d-none d-md-table-cell" scope="col">Spookiness</th>
+                        <th class="d-none d-md-table-cell" scope="col">Wildness</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cat of data" style="cursor: pointer;" [routerLink]="['/cat', cat.id]" routerLinkActive="true">
+                        <td scope="row">
+                            <img *ngIf="cat.imageUri != 'string' && cat.imageUri != null; else elseBlock" class="cat-thumbnail" src="{{cat.imageUri}}"/>
+                            <ng-template #elseBlock>
+                                <img *ngIf="cat.imageUri == 'string' || cat.imageUri == null" class="cat-thumbnail" 
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNuvafpok1f34VfmtLMX_0RYNYnJ-aSpv0qQ&usqp=CAU"/>
+                            </ng-template>
+                        </td>
+                        <td scope="row">{{cat.name}}</td>
+                        <td class="d-none d-md-table-cell" scope="row">{{cat.charm}}</td>
+                        <td class="d-none d-md-table-cell" scope="row">{{cat.coolness}}</td>
+                        <td class="d-none d-md-table-cell" scope="row">{{cat.fluidness}}</td>
+                        <td class="d-none d-md-table-cell" scope="row">{{cat.softness}}</td>
+                        <td class="d-none d-md-table-cell" scope="row">{{cat.spookiness}}</td>
+                        <td class="d-none d-md-table-cell" scope="row">{{cat.wildness}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

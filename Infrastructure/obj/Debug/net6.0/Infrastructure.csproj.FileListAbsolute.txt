@@ -1,0 +1,15 @@
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\bin\Debug\net6.0\Infrastructure.deps.json
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\bin\Debug\net6.0\ref\Infrastructure.dll
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\bin\Debug\net6.0\Domain.dll
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\bin\Debug\net6.0\Domain.pdb
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
+C:\_PRUEBA\ExampleProject\CatList\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb

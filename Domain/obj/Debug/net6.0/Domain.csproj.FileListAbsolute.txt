@@ -1,0 +1,11 @@
+C:\_PRUEBA\ExampleProject\CatList\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\_PRUEBA\ExampleProject\CatList\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\_PRUEBA\ExampleProject\CatList\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\_PRUEBA\ExampleProject\CatList\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\_PRUEBA\ExampleProject\CatList\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\_PRUEBA\ExampleProject\CatList\Domain\bin\Debug\net6.0\Domain.dll
+C:\_PRUEBA\ExampleProject\CatList\Domain\bin\Debug\net6.0\ref\Domain.dll
+C:\_PRUEBA\ExampleProject\CatList\Domain\bin\Debug\net6.0\Domain.pdb
+C:\_PRUEBA\ExampleProject\CatList\Domain\obj\Debug\net6.0\Domain.dll
+C:\_PRUEBA\ExampleProject\CatList\Domain\obj\Debug\net6.0\ref\Domain.dll
+C:\_PRUEBA\ExampleProject\CatList\Domain\obj\Debug\net6.0\Domain.pdb

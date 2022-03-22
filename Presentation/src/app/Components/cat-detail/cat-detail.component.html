@@ -1,0 +1,114 @@
+<div class="container content-center" style="max-width: 1100px;">
+    <div  id="mainContainer" class="panel">
+        <div class="d-flex flex-column justify-content-center">
+            <img *ngIf="cat.imageUri != 'string' && cat.imageUri != null; else elseImgBlock" id="mainImage" class="p-2 detailImg" src="{{cat.imageUri}}"/>
+            <ng-template #elseImgBlock>
+                <img *ngIf="cat.imageUri == 'string' || cat.imageUri == null" id="mainImage" class="p-2 detailImg" 
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNuvafpok1f34VfmtLMX_0RYNYnJ-aSpv0qQ&usqp=CAU"/>
+            </ng-template>
+            
+            <h2 class="p-2 text-center">{{cat.name}}</h2>   
+        </div>     
+        <hr>
+        <h2>Description:</h2>
+        <div class="d-flex flex-column">
+            <div class="p-2">
+                <p>{{cat.description}}</p>
+            </div>
+        </div>
+        <hr>
+        <h2>Stats:</h2>
+        <div class="d-flex flex-column" style="margin-bottom: 20px;">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 p-3">
+                    <label class="p-2 statLabel">Charm: {{cat.charm}}</label>
+                    <div class="progress">
+                        <div [ngClass]="{'progress-bar bg-success': cat.charm > 85,
+                            'progress-bar bg-warning': cat.charm > 25 && cat.charm <= 85,
+                            'progress-bar bg-danger': cat.charm >= 0 && cat.charm <= 25}"role="progressbar" [style.width]="cat.charm + '%'"
+                                aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-sm-12 p-3">
+                    <label class="p-2 statLabel">Coolness: {{cat.coolness}}</label>
+                    <div class="progress">
+                        <div [ngClass]="{'progress-bar bg-success': cat.coolness > 85,
+                            'progress-bar bg-warning': cat.coolness > 25 && cat.coolness <= 85,
+                            'progress-bar bg-danger': cat.coolness >= 0 && cat.coolness <= 25}" role="progressbar" [style.width]="cat.coolness + '%'"
+                                aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-sm-12 p-3">
+                    <label class="p-2 statLabel">Fluidness: {{cat.fluidness}}</label>
+                    <div class="progress">
+                        <div [ngClass]="{'progress-bar bg-success': cat.fluidness > 85,
+                            'progress-bar bg-warning': cat.fluidness > 25 && cat.fluidness <= 85,
+                            'progress-bar bg-danger': cat.fluidness >= 0 && cat.fluidness <= 25}" role="progressbar" [style.width]="cat.fluidness + '%'"
+                                aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-sm-12 p-3">
+                    <label class="p-2 statLabel">Spookiness: {{cat.spookiness}}</label>
+                    <div class="progress">
+                        <div [ngClass]="{'progress-bar bg-success': cat.spookiness > 85,
+                            'progress-bar bg-warning': cat.spookiness > 25 && cat.spookiness <= 85,
+                            'progress-bar bg-danger': cat.spookiness >= 0 && cat.spookiness <= 25}" role="progressbar" [style.width]="cat.spookiness + '%'"
+                                aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-sm-12 p-3">
+                    <label class="p-2 statLabel">Softness: {{cat.softness}}</label>
+                    <div class="progress">
+                        <div [ngClass]="{'progress-bar bg-success': cat.softness > 85,
+                            'progress-bar bg-warning': cat.softness > 25 && cat.softness <= 85,
+                            'progress-bar bg-danger': cat.softness >= 0 && cat.softness <= 25}" role="progressbar" [style.width]="cat.softness + '%'"
+                                aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-sm-12 p-3">
+                    <label class="p-2 statLabel">Wildness: {{cat.wildness}}</label>
+                    <div class="progress">
+                        <div [ngClass]="{'progress-bar bg-success': cat.wildness > 85,
+                            'progress-bar bg-warning': cat.wildness > 25 && cat.wildness <= 85,
+                            'progress-bar bg-danger': cat.wildness >= 0 && cat.windness <= 25}" role="progressbar" [style.width]="cat.wildness + '%'"
+                                aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h2>Comments:</h2>
+        <div *ngFor="let comment of comments" class="d-flex flex-column">
+            <strong>{{comment.user}}</strong>
+            <small class="date-label">{{comment.date | date:'M/d/yy, HH:mm'}}</small>
+            <label class="message-label">{{comment.comment}}</label>
+            <hr>
+        </div>
+        <h4 *ngIf="comments == undefined || comments == ''">Nobody has commented yet.</h4>
+        <div *ngIf="stateService.JwtToken != ''; else elseBlock">
+            <form>
+                <div class="from-group">
+                    <textarea [(ngModel)]="commentInput" name="commentInput" class="form-control" rows="3"></textarea>
+                    <button class="btn btn-primary btnForm" (click)="comment()">Comment</button>
+                </div>           
+            </form>
+        </div>     
+        <ng-template #elseBlock>
+            <button mat-raised-button class="btn btn-primary" (click)="openLoginModal()">
+                Log in for comment
+            </button>
+        </ng-template>  
+    </div>
+</div>
+

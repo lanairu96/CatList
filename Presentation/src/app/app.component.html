@@ -1,0 +1,22 @@
+<mat-toolbar>
+  <a href="/">RankCats</a>
+  <span class="spacer-1"></span>
+  <div *ngIf="stateService.JwtToken != ''; else elseBlock">
+      <mat-icon>person</mat-icon>
+      <label>{{stateService.Username}}</label>   
+      <button mat-button class="btn btn-primary m-2" (click)="logout()">
+          <label>Log out</label>
+          <mat-icon>logout</mat-icon>
+      </button>
+  </div>
+  <ng-template #elseBlock>
+      <button mat-button class="btn btn-primary m-2" (click)="openLoginModal()">
+          <label>Log in</label>
+          <mat-icon>login</mat-icon>
+      </button>
+  </ng-template>
+</mat-toolbar>
+<h1 id="title" class="d-flex justify-content-center">RankCats</h1>
+<h3 id="titleDescription" class="d-flex justify-content-center">Welcome to the rank of the best cats on the Internet!</h3>
+<hr>
+<router-outlet></router-outlet>

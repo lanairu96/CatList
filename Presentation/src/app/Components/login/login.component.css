@@ -1,0 +1,12 @@
+
+  
+  #loginButton{
+      width: 150px;
+      margin-top: 5vh;
+  }
+
+  #error-label{
+    color: #FF6464;
+    font-weight:600;
+  }
+  
